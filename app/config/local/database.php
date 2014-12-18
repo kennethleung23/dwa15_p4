@@ -25,7 +25,7 @@ return array(
 			'host'      => 'localhost',
 			'database'  => 'task_keeper',
 			'username'  => 'root',
-			'password'  => 'root',
+			'password'  => 'iZY3YgY4gE',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
