@@ -1,0 +1,15 @@
+<?php echo Form::open(array('url' => 'lorem', 
+					'method' => 'POST'));; ?> 
+
+	<?php echo Form::label('num_paragraphs', 'Number of paragraphs:');; ?> 
+
+	<?php echo Form::text('num_paragraphs',
+	              isset($num_paragraphs)? $num_paragraphs:'10',
+	              array('id' => 'num_paragraphs',
+	                    'pattern' => '[0-9]{1,2}',
+	                    'size' => '5'));; ?> 
+
+	<i>(1 to 99)<i><br><br>
+
+	<?php echo Form::submit('Generate'); ?> 
+<?php echo Form::close();; ?>

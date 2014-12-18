@@ -1,0 +1,17 @@
+<?php $__env->startSection('content'); ?>
+	<div class="container">
+		<div>
+			
+	  		<div class="pull-right col-md-6">
+	  			<?php echo Form::open(array('url'=>'/search-keeper')); ?>
+	  			<?php echo Form::text('query'); ?>
+				<?php echo Form::submit('Search!', array("class"=>"btn btn-sm btn-primary")); ?>
+				<?php echo Form::close(); ?>
+	  		</div>
+	  		
+			<a class="col-md-4 btn btn-sm btn-success" href='/add-concoction'>Add concoction</a>
+	    </div> 
+	</div>
+  <?php echo $__env->yieldContent('main_content'); ?>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('_2_logout_bar', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

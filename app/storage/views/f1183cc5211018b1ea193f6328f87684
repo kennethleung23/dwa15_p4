@@ -1,0 +1,79 @@
+<?php $__env->startSection('content'); ?>
+  <div class="container">
+    <?php
+      if ($user_input_error){
+        echo "<div class='alert alert-danger container'>" . $user_input_error_message . "</div>";
+      }
+    ?>
+
+  	<?php echo $__env->yieldContent('add_or_edit_concoction_header'); ?>
+
+    <!--Add concoction form-->
+    <?php echo $__env->yieldContent('add_or_edit_concoction_url'); ?>
+
+    <br>
+    <?php echo Form::label('title_label', 'Title'); ?>
+    <?php echo Form::text('title', $title, array("class" => "form-control")); ?>
+    
+    <br>
+    <?php 
+      if ($image_file_name != null && $image_file_name != ""){
+          echo "<img src='/images/" . $image_file_name . "' height=150 width=150>";
+        } else {
+          echo "<img src='/restricted_images/no_image_concoction.png' height=150 width=150>";
+        }
+    ?>
+    <br>
+    <br>
+    <?php echo Form::file('file'); ?>
+
+    <br>
+  	<?php echo Form::label('reference_link_label', 'Reference Link'); ?>
+    <?php echo Form::text('reference_link', $reference_link, array("class" => "form-control")); ?>
+
+    <br>
+  	<?php echo Form::label('ingredients_label', 'Ingredients'); ?>
+    <br>
+    <?php echo Form::textarea('ingredients', $ingredients, array("class" => "form-control")); ?>
+    <br>
+  	<?php echo Form::label('directions_label', 'Directions'); ?>
+    <br>
+    <?php echo Form::textarea('directions', $directions, array("class" => "form-control")); ?>
+
+    <br>
+    <br>
+
+  	<?php echo Form::label('tags_header_label', 'Tags'); ?>
+    <br>
+
+    <div class="table-responsive container">
+      <table class="table">
+        <tr>
+          <?php $all_tags = Tag::all(); ?>
+        <?php foreach($all_tags as $tag): ?>
+          <th>
+            <span>
+              <?php echo $tag->name; ?>
+              <?php $check_tag = in_array($tag->name, $concoction_tag_names); ?>
+              <input type="checkbox" name= <?php echo $tag->name; ?> <?php if ($check_tag) {echo "checked";} ?>>
+            </span>
+          </th>  
+        <?php endforeach; ?>
+        </tr>
+      </table>
+    </div>
+
+    <br>
+    <div class='pull-right'>
+      <input type="checkbox" name="user_made_this" <?php if ($user_made_this) {echo "checked";} ?>>
+      <label name='user_made_this_label' class='label label-success'>I made this!</label>
+    </div>
+    <br>
+    <br>
+	 <?php echo $__env->yieldContent('add_or_edit_concoction_submit'); ?>
+  </div>
+  	<?php echo Form::close(); ?>
+    <br>
+    <br>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('_2_logout_bar', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

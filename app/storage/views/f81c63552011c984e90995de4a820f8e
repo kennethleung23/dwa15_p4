@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+
+	<title><?php echo $__env->yieldContent('title','DWA15 - P3 Project'); ?></title>
+	<link rel="stylesheet" type="text/css" href="../style.css">
+	<meta charset = 'utf-8'>
+	
+	<?php echo $__env->yieldContent('head'); ?>
+
+</head>
+<body>
+
+	<h1><a href = '/'><?php echo $__env->yieldContent('head','DWA15 - P3 Project'); ?></a></h1>
+	
+	<?php echo $__env->yieldContent('content'); ?>
+
+</body>
+</html>

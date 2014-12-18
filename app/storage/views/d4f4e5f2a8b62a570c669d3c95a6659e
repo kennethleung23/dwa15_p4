@@ -1,0 +1,42 @@
+<?php $__env->startSection('body'); ?>
+	<div class = "container">
+		<div>
+			<?php if(Session::get('flash_message')): ?>
+		        <div class='alert alert-danger container'>
+		          <?php echo Session::get('flash_message'); ?>
+		        </div>
+  			<?php endif; ?>
+			<img src='/restricted_images/witchesbrew.jpg' width=500 height=300>
+			<div class="row container">
+				<div class="col-md-4">
+					<h2>Log in</h2>
+					<div>
+				  		<?php echo Form::open(array('url' => '/')); ?>
+
+				  		<table class='table'>
+				    		<tr>
+				    			<td><?php echo Form::label('email_label', 'Email'); ?></td>
+				    			<td><?php echo Form::text('email'); ?></td>
+				    		</tr>
+				    		<tr>
+				    			<td><?php echo Form::label('password_label', 'Password'); ?>  </td>
+				    			<td><?php echo Form::password('password'); ?></td>
+				    		</tr>	
+			    		</table>
+			    		
+			    		<?php echo Form::submit('Submit', array('class'=>'btn btn-lg btn-primary')); ?>
+
+						<?php echo Form::close(); ?>
+				  	</div>
+				</div>
+				<div class="col-md-6">
+					<h2>New to Recipe Tracker?</h2>
+					<a href="/sign-up" class="btn btn-lg btn-success">
+						Sign up!
+					</a>
+				</div>
+			</div>
+		</div>
+	</div> 
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('_1_base_view', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

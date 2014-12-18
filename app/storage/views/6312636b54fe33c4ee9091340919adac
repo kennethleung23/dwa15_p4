@@ -1,0 +1,16 @@
+<?php $__env->startSection('title'); ?>
+  	Add concoction
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('add_or_edit_concoction_header'); ?>
+	<h1>Add Recipe</h1>
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('add_or_edit_concoction_url'); ?>
+	<?php echo Form::open(array('url'=>'/add-concoction/', 'files'=>true)); ?>
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('add_or_edit_concoction_submit'); ?>
+	<?php echo Form::submit('Add concoction!', array('class'=>'btn btn-lg btn-primary')); ?>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('_4_add_or_edit_concoction', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

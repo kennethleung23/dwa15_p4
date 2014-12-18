@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title><?php echo $__env->yieldContent("title", "Recipe Tracker"); ?></title>
+	<?php echo HTML::style('/packages/bootstrap-3.2.0-dist/css/bootstrap.min.css');; ?>
+	<?php echo HTML::style('/packages/bootstrap-3.2.0-dist/css/starter-template.css');; ?>
+</head>
+<body>
+  <?php echo $__env->yieldContent('body'); ?>
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <?php echo HTML::script('/packages/bootstrap-3.2.0-dist/js/bootstrap.min.js');; ?>
+
+
+</body>
+</html>

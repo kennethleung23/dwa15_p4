@@ -1,0 +1,22 @@
+<?php $__env->startSection('content'); ?>
+	
+	
+	<h2>Generate random Lorem Ipsum text:</h2>
+	<p>Generate up to 99 paragraphs of random filler text for your applications..<br></p>
+	
+	<?php echo $__env->make('lorem_form', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+	
+	<br>
+	
+	<h2>Generate random user information:</h2>
+	<p>Create random user data for your applications. (Optionally, include emails, <a href="http://xkcd.com/936">xkcd-style passwords</a>,
+	birthdays and locations.)</p>
+	
+	<?php echo $__env->make('users_form', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+	
+	<br>
+	
+
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('_master', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
