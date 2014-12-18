@@ -7,17 +7,17 @@
 <https://github.com/kennethleung23/dwa15_p4>
 
 ## Description
-Recipe Tracker is a tool which allows users to keep track of recipes, food ingredients and other information. In the meantime, it also provides several features for users to update, create, read and delete records.
+Recipe Tracker is a tool which allows authenticated users to keep track of recipes, food ingredients and other information. In the meantime, it also provides several features for users to update, create, read and delete records.
 
 ## Demo
-Recorded Demo: http://screencast.com/t/6gqOgU30z
+Recorded Demo: http://screencast.com/t/Ok498elgvJ
 
 ## Details for teaching team
 Login Information:
-Username: kentheman23@gmail.com
+Username: tom@gmail.com
 Password: password
 
-Username: tom@gmail.com
+Username: kentheman23@gmail.com
 Password: password
 
 ## Outside code
